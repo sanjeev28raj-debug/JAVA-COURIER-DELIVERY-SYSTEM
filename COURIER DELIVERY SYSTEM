@@ -1,0 +1,53 @@
+class Package {
+    String trackingId;
+    double weightKg;
+
+    // Constructor of Package
+    Package(String trackingId, double weightKg) {
+        this.trackingId = trackingId;
+        this.weightKg = weightKg;
+    }
+
+    // Method to display package details
+    void display() {
+        System.out.println("Tracking ID: " + trackingId);
+        System.out.println("Weight: " + weightKg + " kg");
+    }
+}
+
+
+// Child class
+class FragilePackage extends Package {
+    double insuranceValue;
+
+    // Constructor of FragilePackage
+    FragilePackage(String trackingId, double weightKg, double insuranceValue) {
+        super(trackingId, weightKg);
+        this.insuranceValue = insuranceValue;
+    }
+
+    // Method overriding
+    @Override
+    void display() {
+        System.out.println("Tracking ID: " + trackingId);
+        System.out.println("Weight: " + weightKg + " kg");
+        System.out.println("Insurance Value: Rs." + insuranceValue);
+    }
+}
+
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating an object of FragilePackage
+        FragilePackage p = new FragilePackage(
+            "TRK12345",
+            5.5,
+            10000
+        );
+
+        // Calling overridden display() method
+        p.display();
+    }
+}
