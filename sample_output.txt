@@ -1,0 +1,9 @@
+========================================
+JAVA COURIER DELIVERY SYSTEM
+
+Tracking ID: TRK12345
+Weight: 5.5 kg
+Insurance Value: Rs.10000.0
+
+========================================
+END OF OUTPUT
